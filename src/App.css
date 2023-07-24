@@ -1,0 +1,136 @@
+body {
+  --color-background: #fafafa;
+  --color-foreground: #1f2023;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+body.dark {
+  --color-background: #1f2023;
+  --color-foreground: #efefef;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+
+body.dark .lgbtq {
+  display: none;
+}
+
+.calculator {
+  padding: 50px;
+  border: 10px solid #0e0d0d;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 0 5px rgba(199, 12, 12, 0.1);
+  background-color: pink;
+}
+
+.lgbtq {
+  width: 100%;
+  height: 80px;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/LGBT_Rainbow_Flag.png/1200px-LGBT_Rainbow_Flag.png?20160110223336");
+  background-size: contain;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.display {
+  text-align: flex;
+  margin-bottom: 10px;
+  justify-items: center;
+}
+
+.container {
+  width: 400px;
+  margin: auto;
+  justify-self: baseline;
+
+}
+
+.input {
+  font-size: 18px;
+  color-scheme: blue ;
+  box-sizing: initial;
+  border: 2px solid black;
+  min-height: 24px;
+  padding: 8px;
+  background-color: white;
+  text-align: end;
+  
+}
+
+.result {
+  font-size: 24px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 10px;
+  font-size: 18px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(193, 109, 109);
+  color: white;
+  margin-bottom: 0%;
+}
+
+.dark-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 25px;
+	background: grey;
+	display: block;
+	border-radius: 25px;
+	position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 18px;
+	height: 18px;
+	background: #fff;
+	border-radius: 18px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: #bada55;
+}
+
+input:checked + label:after {
+	left: calc(100% - 3px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 30px;
+}
+
+  
